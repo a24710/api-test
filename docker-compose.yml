@@ -1,0 +1,56 @@
+version: "3.7"
+
+services:
+
+  nginx_cont:
+    container_name: agile_nginx_cont
+    build: ./docker/nginx    
+    ports: 
+      - "81:80"
+    volumes: 
+      - .:/var/www/html
+    depends_on: 
+      - php_cont
+
+  php_cont:
+    container_name: agile_php_cont
+    build: ./docker/php
+    user: 1000:1000
+    environment:
+      PHP_IDE_CONFIG: serverName=Docker
+      PHP_XDEBUG_ENABLED: 1
+      XDEBUG_CONFIG: remote_host=172.17.0.1 remote_port=9005
+    volumes: 
+      - .:/var/www/html
+
+  mysql_cont:
+    container_name: agile_mysql_cont
+    image: "mysql:8.0.23"
+    environment: 
+      MYSQL_ROOT_PASSWORD: "mypassword"
+      MYSQL_DATABASE: "agile_shop"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "mypassword"
+    ports: 
+      - "3307:3306"
+    volumes: 
+      - agile_mysql_volume:/var/lib/mysql
+
+volumes:
+  agile_mysql_volume:
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+    

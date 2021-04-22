@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "3cc78c38-a6c2-45f3-8a7a-c126a8f6e9e8",
+		"name": "Api-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:81/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "JWTToken",
+								"value": "{{JWTToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"@type\": \"User3\",\n    \"email\": \"johndoe32@mail.com\",\n    \"roles\": [\n        \"ROLE_USER\"\n    ]\n}\n\n\n\n\n\n\n\n\n\n\n"
+						},
+						"url": {
+							"raw": "localhost:81/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n\n\n\n\n\n\n\n\n\n"
+						},
+						"url": {
+							"raw": "localhost:81/api/users/a41cbb9c-26ad-47c8-9086-df26a0010e4b",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"users",
+								"a41cbb9c-26ad-47c8-9086-df26a0010e4b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/merge-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \n    \"email\":\"updated2@mail.com\",\n    \"roles\": [\"ROLE_USER\", \"ROLE_ADMIN\"]\n}\n\n\n\n\n\n\n\n\n\n\n\n\n"
+						},
+						"url": {
+							"raw": "localhost:81/api/users/36f0c49e-fc4d-4b06-b9ad-d17b390009a2",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"users",
+								"36f0c49e-fc4d-4b06-b9ad-d17b390009a2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Get Customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:81/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Customer",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "JWTToken",
+								"value": "{{JWTToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"@type\": \"Customer\",\n    \"email\": \"johnrambo2@mail.com\",\n    \"name\": \"John\",\n    \"surname\": \"Rambo\"\n}\n\n\n\n\n\n\n\n\n\n\n\n\n"
+						},
+						"url": {
+							"raw": "localhost:81/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n\n\n\n\n\n\n\n\n\n"
+						},
+						"url": {
+							"raw": "localhost:81/api/users/e4b1b780-f73b-4dd8-a3d9-1110a5cf3726",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"users",
+								"e4b1b780-f73b-4dd8-a3d9-1110a5cf3726"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Customer Avatar",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "multipart/form-data; boundary=<calculated when request is sent>"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/david/Downloads/avatar.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:81/api/customers/df8e981e-ed78-4cdd-8251-8b1156c4ac83/avatar",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"customers",
+								"df8e981e-ed78-4cdd-8251-8b1156c4ac83",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletet Customer Avatar",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "multipart/form-data; boundary=<calculated when request is sent>"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/david/Downloads/dummy.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:81/api/customers/df8e981e-ed78-4cdd-8251-8b1156c4ac83/avatar",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"customers",
+								"df8e981e-ed78-4cdd-8251-8b1156c4ac83",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Customer",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "JWTToken",
+								"type": "text",
+								"value": "{{JWTToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/merge-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \n    \"name\": \"Anniaaae\",\n    \"surname\": \"Steuaber\",\n    \"email\": \"Madonna.Conn@example.org\"\n}\n\n\n\n\n\n\n\n\n\n\n\n\n"
+						},
+						"url": {
+							"raw": "localhost:81/api/customers/df8e981e-ed78-4cdd-8251-8b1156c4ac83",
+							"host": [
+								"localhost"
+							],
+							"port": "81",
+							"path": [
+								"api",
+								"customers",
+								"df8e981e-ed78-4cdd-8251-8b1156c4ac83"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Admin Token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseBody.has(\"token\")){    ",
+							"    postman.setGlobalVariable(\"JWTToken\", JSON.parse(responseBody).token);    ",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "adminuser@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mypassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:81/security/request_token",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"security",
+						"request_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Non-Admin Token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseBody.has(\"token\")){    ",
+							"    postman.setGlobalVariable(\"JWTToken\", JSON.parse(responseBody).token);    ",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "regularUser@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mypassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:81/security/request_token",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"security",
+						"request_token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
