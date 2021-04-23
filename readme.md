@@ -57,8 +57,15 @@ Exit the docker php container and run: (replace 'youruser' with your user name)
     sudo chown youruser public/avatars
 
 A postman collection is available in the root directory to test all api methods.
+
+Call first "Get admin token" or "Get non admin token". Postman will request a new JWT token and will store it in a
+env variable that will be injected in every future header request.
+
+
 Please, notice that uuids are randomly generated, and the ones present in some postman urls are just placeholders.
 In order to test this urls replace the placeholder uuid with a real one you get from a get collection call.
+
+
 
 If you want a deeper explanation check the "README extended.pdf" file in the root folder.
 
