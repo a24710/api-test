@@ -14,7 +14,7 @@ Move these private.pem and public.pem in the folder "config/jwt"
 
 Create a new file in the project root directory called .env.local (including dots)
 
-Insert a new line and replace PASSPHRASE with the one you introduced before. Don't introduce blanks, just type it as show here.
+Insert a new line and replace PASSPHRASE with the one you introduced before. Don't introduce blanks, just type it as shown here.
 
     JWT_PASSWORD="PASSPHRASE"
 
